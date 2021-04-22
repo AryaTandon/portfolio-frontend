@@ -22,7 +22,7 @@ function App() {
 
     const fetchCVContent = async () => {
         try {
-        const res = await fetch("http://localhost:4000/");
+        const res = await fetch(process.env.REACT_APP_BACKEND_URL!);
         const jsonData = await res.json();
         setCVContent(jsonData)
         } catch(err) {
@@ -38,7 +38,7 @@ function App() {
             fallbackUrls: [ "https://ifconfig.co/ip" ]
         });
         console.log(clientIP);
-        await fetch("http://localhost:4000/", {
+        await fetch(process.env.REACT_APP_BACKEND_URL!, {
             method: "POST",
             headers: {
             'Content-Type': 'application/json'
