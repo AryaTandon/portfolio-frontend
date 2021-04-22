@@ -2,11 +2,19 @@ import './components.css';
 import { IContent } from '../App';
 
 const CV = (content: IContent[]) => {
-    const bgColors = ["red","yellow","green","blue","indigo","purple","pink"]
+    const bgColors = [
+        "from-red-300 via-red-50 to-red-20 hover:from-red-400 hover:via-red-100 hover:to-red-20",
+        "from-yellow-300 via-yellow-50 to-yellow-20 hover:from-yellow-400 hover:via-yellow-100 hover:to-yellow-20",
+        "from-green-300 via-green-50 to-green-20 hover:from-green-400 hover:via-green-100 hover:to-green-20",
+        "from-blue-300 via-blue-50 to-blue-20 hover:from-blue-400 hover:via-blue-100 hover:to-blue-20",
+        "from-indigo-300 via-indigo-50 to-indigo-20 hover:from-indigo-400 hover:via-indigo-100 hover:to-indigo-20",
+        "from-purple-300 via-purple-50 to-purple-20 hover:from-purple-400 hover:via-purple-100 hover:to-purple-20",
+        "from-pink-300 via-pink-50 to-pink-20 hover:from-pink-400 hover:via-pink-100 hover:to-pink-20"
+        // "red","yellow","green","blue","indigo","purple","pink"
+    ];
     const bgColor = bgColors[Math.floor(Math.random() * bgColors.length)];
     const bgColor2 = bgColors[Math.floor(Math.random() * bgColors.length)];
     const bgColor3= bgColors[Math.floor(Math.random() * bgColors.length)];
-    const div1Style = ``;
     const randomInt = Math.floor(Math.random() * 20) + 1;
     const randomInt2 = Math.floor(Math.random() * 20) + 1;
     const randomInt3 = Math.floor(Math.random() * 20) + 1;
@@ -17,7 +25,7 @@ const CV = (content: IContent[]) => {
             <div className="flex flex-wrap">
                 
               <div className={`lg:pt-${randomInt} w-full md:w-4/12 px-4 text-center`}>
-                <div className={`relative flex flex-col min-w-0 break-words bg-gradient-to-t from-pink-300 via-pink-50 to-pink-20 hover:from-pink-400 hover:via-pink-100 hover:to-pink-20 animate-fade-in-down rounded-xl shadow-md w-full mb-8 shadow-lg rounded-lg`}>
+                <div className={`relative flex flex-col min-w-0 break-words bg-gradient-to-t ${bgColor} animate-fade-in-down rounded-xl shadow-md w-full mb-8 shadow-lg rounded-lg`}>
                   <div className="px-12 py-8 flex-auto">
                     <div className={`text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-${bgColor}-400`}>
                       <i className="fas fa-award"></i>
