@@ -1,7 +1,18 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    colors: {
+      red: colors.red,
+      yellow: colors.yellow,
+      green: colors.green,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      purple: colors.purple,
+      pink: colors.pink,
+    },
     extend: {
         keyframes: {
             'fade-in-down': {
