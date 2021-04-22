@@ -10,7 +10,11 @@ const CV = (content: IContent[]) => {
         "from-indigo-300 via-indigo-50 to-indigo-20 hover:from-indigo-400 hover:via-indigo-100 hover:to-indigo-20",
         "from-purple-300 via-purple-50 to-purple-20 hover:from-purple-400 hover:via-purple-100 hover:to-purple-20",
         "from-pink-300 via-pink-50 to-pink-20 hover:from-pink-400 hover:via-pink-100 hover:to-pink-20"
+        // Can't just do this...
         // "red","yellow","green","blue","indigo","purple","pink"
+        // ...and use from-${bgColor}-300 in the classNames!
+        // This is because Tailwind's PurgeCSS doesn't preserve classes which use string interpolation
+        // See here for more: https://stackoverflow.com/questions/66096170/tailwindcss-missing-colors-in-production-vs-development-laravel-jetstream
     ];
     const bgColor = bgColors[Math.floor(Math.random() * bgColors.length)];
     const bgColor2 = bgColors[Math.floor(Math.random() * bgColors.length)];
@@ -67,7 +71,7 @@ const CV = (content: IContent[]) => {
               </div>
 
               <div className={`lg:pt-${randomInt2} w-full md:w-4/12 px-4 text-center`}>
-                <div className={`relative flex flex-col min-w-0 break-words bg-gradient-to-t from-${bgColor2}-300 via-${bgColor2}-50 to-${bgColor2}-20 hover:from-${bgColor2}-400 hover:via-${bgColor2}-100 hover:to-${bgColor2}-20 animate-fade-in-down rounded-xl shadow-md w-full mb-8 shadow-lg rounded-lg`}>
+                <div className={`relative flex flex-col min-w-0 break-words bg-gradient-to-t ${bgColor2} animate-fade-in-down rounded-xl shadow-md w-full mb-8 shadow-lg rounded-lg`}>
                   <div className="px-12 py-8 flex-auto">
                     <div className={`text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-${bgColor2}-400`}>
                       <i className="fas fa-retweet"></i>
@@ -109,7 +113,7 @@ const CV = (content: IContent[]) => {
               </div>
 
               <div className={`pt-${randomInt3} w-full md:w-4/12 px-4 text-center`}>
-                <div className={`relative flex flex-col min-w-0 break-words bg-gradient-to-t from-${bgColor3}-300 via-${bgColor3}-50 to-${bgColor3}-20 hover:from-${bgColor3}-400 hover:via-${bgColor3}-100 hover:to-${bgColor3}-20 animate-fade-in-down rounded-xl shadow-md w-full mb-8 shadow-lg rounded-lg`}>
+                <div className={`relative flex flex-col min-w-0 break-words bg-gradient-to-t ${bgColor3} animate-fade-in-down rounded-xl shadow-md w-full mb-8 shadow-lg rounded-lg`}>
                   <div className="px-12 py-8 flex-auto">
                     <div className={`text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-${bgColor3}-400`}>
                       <i className="fas fa-fingerprint"></i>
