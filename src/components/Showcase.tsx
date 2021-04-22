@@ -4,21 +4,17 @@ import { IContent } from '../App';
 const Showcase = (content: IContent[]) => {
     const bgColors = ["red","yellow","green","blue","indigo","purple","pink"]
     const bgColor = bgColors[Math.floor(Math.random() * bgColors.length)];
-    const bgColor2 = bgColors[Math.floor(Math.random() * bgColors.length)];
-    const bgColor3= bgColors[Math.floor(Math.random() * bgColors.length)];
     const randomInt = Math.floor(Math.random() * 20) + 1;
-    const randomInt2 = Math.floor(Math.random() * 20) + 1;
-    const randomInt3 = Math.floor(Math.random() * 20) + 1;
     return (
        
         <section className="w-full pb-20 bg-gray-900 -mt-24">
           <div className="container mx-auto">
             <div className="flex flex-wrap">
 
-              <div className={`lg:pt-${randomInt2} w-full ml-50 md:w-12/12 px-4 pt-10 text-center`}>
-                <div className={`relative flex flex-col min-w-0 break-words bg-gradient-to-t from-${bgColor2}-300 via-${bgColor2}-50 to-${bgColor2}-20 hover:from-${bgColor2}-400 hover:via-${bgColor2}-100 hover:to-${bgColor2}-20 animate-fade-in-down rounded-xl shadow-md w-full mb-8 shadow-lg rounded-lg`}>
+              <div className={`lg:pt-${randomInt} w-full ml-50 md:w-12/12 px-4 pt-10 text-center`}>
+                <div className={`relative flex flex-col min-w-0 break-words bg-gradient-to-t from-${bgColor}-300 via-${bgColor}-50 to-${bgColor}-20 hover:from-${bgColor}-400 hover:via-${bgColor}-100 hover:to-${bgColor}-20 animate-fade-in-down rounded-xl shadow-md w-full mb-8 shadow-lg rounded-lg`}>
                   <div className="px-12 py-8 flex-auto">
-                    <div className={`text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-${bgColor2}-400`}>
+                    <div className={`text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-${bgColor}-400`}>
                       <i className="fas fa-retweet"></i>
                     </div>
                     <div className="h-10"></div>
