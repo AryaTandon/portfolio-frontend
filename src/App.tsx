@@ -33,11 +33,9 @@ function App() {
     const postPageViewAndIP = async (date: Date) => {
         try {
         const timestamp = date.getDate()+'-'+(date.getMonth()+1)+'-'+date.getFullYear() +' '+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-        console.log(timestamp);
         const clientIP = await publicIp.v4({
             fallbackUrls: [ "https://ifconfig.co/ip" ]
         });
-        console.log(clientIP);
         await fetch(process.env.REACT_APP_BACKEND_URL!, {
             method: "POST",
             headers: {
@@ -71,7 +69,6 @@ function App() {
                 ContentArr[2].push(obj)
             }
         }
-        console.log(ContentArr)
     };
 
     pushToArray();
