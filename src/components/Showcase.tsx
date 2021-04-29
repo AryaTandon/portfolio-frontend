@@ -52,7 +52,7 @@ const Showcase = (content: IContent[]) => {
                     <div className="h-2"></div>
                     <div>
                         <div className="px-9 flex inline-flex">
-                        <a href={content[0] ? content[0].gitlinkfrontend : ""} title="Go to frontend on GitHub" target="_blank">
+                        <a href={content[0] ? content[0].gitlinkfrontend : ""} title="Go to frontend on GitHub" target="_blank" rel="noopener noreferrer">
                         <img className="hover:opacity-70" src="https://cdn.iconscout.com/icon/free/png-512/github-109-438058.png" alt="GitHub logo" width="60" height="60"></img>
                         </a>
                         </div>
