@@ -39,7 +39,8 @@ function App() {
         await fetch(process.env.REACT_APP_BACKEND_URL!, {
             method: "POST",
             headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'https://aryas-portfolio.netlify.app/'
             },
             body: JSON.stringify({timestamp, clientIP}),
         });
