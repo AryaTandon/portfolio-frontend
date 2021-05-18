@@ -20,8 +20,8 @@ const CV = (content: IContent[]) => {
     const bgColor2 = bgColors[Math.floor(Math.random() * bgColors.length)];
     const bgColor3= bgColors[Math.floor(Math.random() * bgColors.length)];
     const randomInt = `lg:pt-${Math.floor(Math.random() * 20) + 1}`;
-    const randomInt2 = Math.floor(Math.random() * 20) + 1;
-    const randomInt3 = Math.floor(Math.random() * 20) + 1;
+    const randomInt2 = `lg:pt-${Math.floor(Math.random() * 20) + 1}`;
+    const randomInt3 = `lg:pt-${Math.floor(Math.random() * 20) + 1}`;
     return (
        
         <section className="w-full pb-20 bg-gray-900 -mt-24">
@@ -70,7 +70,7 @@ const CV = (content: IContent[]) => {
                 </div>
               </div>
 
-              <div className={`lg:pt-${randomInt2} w-full md:w-4/12 px-4 text-center`}>
+              <div className={`${randomInt2} w-full md:w-4/12 px-4 text-center`}>
                 <div className={`relative flex flex-col min-w-0 break-words bg-gradient-to-t ${bgColor2} animate-fade-in-down rounded-xl shadow-md w-full mb-8 shadow-lg rounded-lg`}>
                   <div className="px-12 py-8 flex-auto">
                     <div className={`text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-${bgColor2}-400`}>
@@ -112,7 +112,7 @@ const CV = (content: IContent[]) => {
                 </div>
               </div>
 
-              <div className={`pt-${randomInt3} w-full md:w-4/12 px-4 text-center`}>
+              <div className={`${randomInt3} w-full md:w-4/12 px-4 text-center`}>
                 <div className={`relative flex flex-col min-w-0 break-words bg-gradient-to-t ${bgColor3} animate-fade-in-down rounded-xl shadow-md w-full mb-8 shadow-lg rounded-lg`}>
                   <div className="px-12 py-8 flex-auto">
                     <div className={`text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-${bgColor3}-400`}>
