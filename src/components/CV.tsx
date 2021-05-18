@@ -19,7 +19,7 @@ const CV = (content: IContent[]) => {
     const bgColor = bgColors[Math.floor(Math.random() * bgColors.length)];
     const bgColor2 = bgColors[Math.floor(Math.random() * bgColors.length)];
     const bgColor3= bgColors[Math.floor(Math.random() * bgColors.length)];
-    const randomInt = Math.floor(Math.random() * 20) + 1;
+    const randomInt = `lg:pt-${Math.floor(Math.random() * 20) + 1}`;
     const randomInt2 = Math.floor(Math.random() * 20) + 1;
     const randomInt3 = Math.floor(Math.random() * 20) + 1;
     return (
@@ -28,7 +28,7 @@ const CV = (content: IContent[]) => {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
                 
-              <div className={`lg:pt-${randomInt} w-full md:w-4/12 px-4 text-center`}>
+              <div className={`${randomInt} w-full md:w-4/12 px-4 text-center`}>
                 <div className={`relative flex flex-col min-w-0 break-words bg-gradient-to-t ${bgColor} animate-fade-in-down rounded-xl shadow-md w-full mb-8 shadow-lg rounded-lg`}>
                   <div className="px-12 py-8 flex-auto">
                     <div className={`text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-${bgColor}-400`}>
@@ -137,7 +137,7 @@ const CV = (content: IContent[]) => {
                         </a>
                         </div>
                         <div className="px-9 flex inline-flex">
-                        <a href={content[2] ? content[2].gitlinkbackend : ""} title="Go to backend on GitHub" target="_blank" rel="noopener noreferrer">
+                        <a href={content[2] ? content[2].gitlinkbackend : ""} title="Go to backend on GitHub" target="_blank" >
                         <img className="hover:opacity-70" src="https://cdn.iconscout.com/icon/free/png-512/github-109-438058.png" alt="GitHub logo" width="60" height="60"></img>
                         </a>
                         </div>
